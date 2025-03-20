@@ -1,13 +1,14 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio do formulário
 
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('username').value.trim(); // Remove espaços em branco
 
-    if (username.trim() !== "") {
+    // Verifica se o usuário é "Itamar"
+    if (username === "Itamar") {
         alert(`Bem-vindo, ${username}!`);
-        // Aqui você pode redirecionar o usuário para outra página ou realizar outras ações
+        // Redireciona para outra página ou realiza outras ações
         // window.location.href = 'dashboard.html';
     } else {
-        alert('Por favor, insira um nome de usuário.');
+        alert('Usuário inválido. Apenas "Usuario cadastrado que pode" pode fazer login.');
     }
 });
